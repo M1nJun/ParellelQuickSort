@@ -25,15 +25,18 @@ int partition(int A[],int p,int r)
         use = b;
     else if(A[b] > A[a] && A[b] < A[c])
         use = b;
+    // Once pivot decided, swap with last element
     if(use != c) {
         int pivot = A[use];
         A[use] = A[r];
         A[r] = pivot;
     }
     int x = A[r];
+    // i keeps track of the border between elements less than or equal to the pivot and elements greater than the pivot
     int i = p-1;
     for(int j = p;j < r;j++)
     {
+        // for each element A[j], if it's less than or equal to the pivot x, it swaps A[j] with A[i+1]
         if(A[j] <= x) 
         {
             i++;
@@ -42,9 +45,11 @@ int partition(int A[],int p,int r)
             A[j] = temp;
         }
     }
+    // Once all elements have been traversed, pivot is placed in its correct position
     int temp = A[i+1];
     A[i+1] = A[r];
     A[r] = temp;
+    // Return pivot index
     return i+1;
 }
 
