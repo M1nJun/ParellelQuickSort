@@ -10,6 +10,85 @@ public:
     int end;
 };
 
+int parallel_partition(int A[], int p, int r, int num_threads)
+{
+    // Median of three
+    int a = p;
+    int b = (p+r)/2;
+    int c = r;
+    int use = c;
+    if(A[a] > A[b] && A[a] < A[c])
+        use = a;
+    else if(A[a] < A[b] && A[a] > A[c])
+        use = a;
+    else if(A[b] < A[a] && A[b] > A[c])
+        use = b;
+    else if(A[b] > A[a] && A[b] < A[c])
+        use = b;
+    // Once pivot decided, swap with last element
+    if(use != c) {
+        int pivot = A[use];
+        A[use] = A[r];
+        A[r] = pivot;
+    }
+    
+    int subregion = (r-p) / num_threads;
+
+    pBlock blocks[num_threads];
+
+    for(int i=0; i < num_threads; i++){
+        blocks[i].start = p + i * subregion;
+        blocks[i].end = blocks[i].start + subregion;
+    }
+
+    #pragma omp parallel for
+    for(int i=0; i < num_threads; i++){
+        part(int A[], blocks[i], pivot);
+    }
+
+    for(int i=0; i < num_threads - 1; i++){
+        blocks[i] = merge(blocks[i], blocks[i+1]);
+    }
+
+    return pivot
+}
+
+void part(int A[], qBlock block, int pivot){
+    int x = pivot;
+    // i keeps track of the border between elements less than or equal to the pivot and elements greater than the pivot
+    int i = block.start-1;
+    for(int j = block.start;j < block.end;j++)
+    {
+        // for each element A[j], if it's less than or equal to the pivot x, it swaps A[j] with A[i+1]
+        if(A[j] <= x) 
+        {
+            i++;
+            int temp = A[i];
+            A[i] = A[j];
+            A[j] = temp;
+        }
+    }
+    block.mid = A[i+1];
+}
+
+qBlock merge(int A[], qBlock b1, qBlock b2){
+    // swap: from b1.mid to b1.end    and     b2.start to b2.mid
+    #pragma omp parallel for
+    for(int i = b1.mid; i < b1.end + 1; i++){
+        int temp = A[b1.mid + i];
+        A[b1.mid + i] = A[b2.start + i];
+        A[b2.start + i] = temp;
+    }
+    
+    qBlock block;
+    block.start = b1.start;
+    block.mid = b1.end;
+    block.end = b2.mid;
+    
+    return block;
+    
+}
+
 int partition(int A[],int p,int r)
 {
     // Median of three
@@ -78,7 +157,7 @@ void quicksort(int A[],int p,int q) {
 
 void naive_parallel_quicksort(int A[],int p,int q,int n_threads) {
     if(n_threads >= 2){
-        int r = partition(A,p,q);
+        int r = parellel_partition(A,p,q, n_threads);
         int n = n_threads/2;
 #pragma omp task shared(A)
         naive_parallel_quicksort(A,p,r-1,n);
