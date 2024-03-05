@@ -1,0 +1,41 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/iminjun/Desktop/github repositories/ParellelQuickSort/quicksort'
+relocations:
+  - { offsetInCU: 0xF0, offset: 0xF0, size: 0x8, addend: 0x0, symName: __Z4partPiR6pBlocki, symObjAddr: 0x0, symBinAddr: 0x100002384, symSize: 0x108 }
+  - { offsetInCU: 0x327F, offset: 0x327F, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0x12780, symBinAddr: 0x10000800C, symSize: 0x0 }
+  - { offsetInCU: 0x39F2, offset: 0x39F2, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedIjEE, symObjAddr: 0x17DF, symBinAddr: 0x100003C47, symSize: 0x0 }
+  - { offsetInCU: 0x3A0C, offset: 0x3A0C, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedImEE, symObjAddr: 0x17E0, symBinAddr: 0x100003C48, symSize: 0x0 }
+  - { offsetInCU: 0x3A26, offset: 0x3A26, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedIyEE, symObjAddr: 0x17E1, symBinAddr: 0x100003C49, symSize: 0x0 }
+  - { offsetInCU: 0x3A40, offset: 0x3A40, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0xF50, symBinAddr: 0x1000032D4, symSize: 0x42C }
+  - { offsetInCU: 0x3A48, offset: 0x3A48, size: 0x8, addend: 0x0, symName: __Z41__static_initialization_and_destruction_0v, symObjAddr: 0x137C, symBinAddr: 0x100003700, symSize: 0x3C }
+  - { offsetInCU: 0x3A90, offset: 0x3A90, size: 0x8, addend: 0x0, symName: _main._omp_fn.0, symObjAddr: 0x16A8, symBinAddr: 0x100003A2C, symSize: 0x64 }
+  - { offsetInCU: 0x3C54, offset: 0x3C54, size: 0x8, addend: 0x0, symName: __Z24naive_parallel_quicksortPiiii, symObjAddr: 0xDD4, symBinAddr: 0x100003158, symSize: 0x17C }
+  - { offsetInCU: 0x3C5C, offset: 0x3C5C, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0xF50, symBinAddr: 0x1000032D4, symSize: 0x42C }
+  - { offsetInCU: 0x3CC4, offset: 0x3CC4, size: 0x8, addend: 0x0, symName: __Z24naive_parallel_quicksortPiiii._omp_fn.0, symObjAddr: 0x15E8, symBinAddr: 0x10000396C, symSize: 0x60 }
+  - { offsetInCU: 0x3CCC, offset: 0x3CCC, size: 0x8, addend: 0x0, symName: __Z24naive_parallel_quicksortPiiii._omp_fn.1, symObjAddr: 0x1648, symBinAddr: 0x1000039CC, symSize: 0x60 }
+  - { offsetInCU: 0x3D38, offset: 0x3D38, size: 0x8, addend: 0x0, symName: __Z24naive_parallel_quicksortPiiii._omp_fn.1, symObjAddr: 0x1648, symBinAddr: 0x1000039CC, symSize: 0x60 }
+  - { offsetInCU: 0x3D40, offset: 0x3D40, size: 0x8, addend: 0x0, symName: _main._omp_fn.0, symObjAddr: 0x16A8, symBinAddr: 0x100003A2C, symSize: 0x64 }
+  - { offsetInCU: 0x3EB7, offset: 0x3EB7, size: 0x8, addend: 0x0, symName: __Z18parallel_partitionPiiii, symObjAddr: 0x2AC, symBinAddr: 0x100002630, symSize: 0x610 }
+  - { offsetInCU: 0x3EBF, offset: 0x3EBF, size: 0x8, addend: 0x0, symName: __Z9partitionPiii, symObjAddr: 0x8BC, symBinAddr: 0x100002C40, symSize: 0x398 }
+  - { offsetInCU: 0x4002, offset: 0x4002, size: 0x8, addend: 0x0, symName: __Z18parallel_partitionPiiii._omp_fn.0, symObjAddr: 0x1548, symBinAddr: 0x1000038CC, symSize: 0xA0 }
+  - { offsetInCU: 0x400A, offset: 0x400A, size: 0x8, addend: 0x0, symName: __Z24naive_parallel_quicksortPiiii._omp_fn.0, symObjAddr: 0x15E8, symBinAddr: 0x10000396C, symSize: 0x60 }
+  - { offsetInCU: 0x4115, offset: 0x4115, size: 0x8, addend: 0x0, symName: __Z5mergePiRK6pBlockS2_._omp_cpyfn.1, symObjAddr: 0x14D4, symBinAddr: 0x100003858, symSize: 0x74 }
+  - { offsetInCU: 0x411D, offset: 0x411D, size: 0x8, addend: 0x0, symName: __Z18parallel_partitionPiiii._omp_fn.0, symObjAddr: 0x1548, symBinAddr: 0x1000038CC, symSize: 0xA0 }
+  - { offsetInCU: 0x4211, offset: 0x4211, size: 0x8, addend: 0x0, symName: __Z5mergePiRK6pBlockS2_, symObjAddr: 0x108, symBinAddr: 0x10000248C, symSize: 0x1A4 }
+  - { offsetInCU: 0x4219, offset: 0x4219, size: 0x8, addend: 0x0, symName: __Z18parallel_partitionPiiii, symObjAddr: 0x2AC, symBinAddr: 0x100002630, symSize: 0x610 }
+  - { offsetInCU: 0x42AB, offset: 0x42AB, size: 0x8, addend: 0x0, symName: __Z5mergePiRK6pBlockS2_._omp_fn.0, symObjAddr: 0x13CC, symBinAddr: 0x100003750, symSize: 0x108 }
+  - { offsetInCU: 0x42B3, offset: 0x42B3, size: 0x8, addend: 0x0, symName: __Z5mergePiRK6pBlockS2_._omp_cpyfn.1, symObjAddr: 0x14D4, symBinAddr: 0x100003858, symSize: 0x74 }
+  - { offsetInCU: 0x435C, offset: 0x435C, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_quicksort.cpp, symObjAddr: 0x13B8, symBinAddr: 0x10000373C, symSize: 0x14 }
+  - { offsetInCU: 0x4364, offset: 0x4364, size: 0x8, addend: 0x0, symName: __Z5mergePiRK6pBlockS2_._omp_fn.0, symObjAddr: 0x13CC, symBinAddr: 0x100003750, symSize: 0x108 }
+  - { offsetInCU: 0x4383, offset: 0x4383, size: 0x8, addend: 0x0, symName: __Z41__static_initialization_and_destruction_0v, symObjAddr: 0x137C, symBinAddr: 0x100003700, symSize: 0x3C }
+  - { offsetInCU: 0x438B, offset: 0x438B, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_quicksort.cpp, symObjAddr: 0x13B8, symBinAddr: 0x10000373C, symSize: 0x14 }
+  - { offsetInCU: 0x4391, offset: 0x4391, size: 0x8, addend: 0x0, symName: __Z9quicksortPiii, symObjAddr: 0xD48, symBinAddr: 0x1000030CC, symSize: 0x8C }
+  - { offsetInCU: 0x4399, offset: 0x4399, size: 0x8, addend: 0x0, symName: __Z24naive_parallel_quicksortPiiii, symObjAddr: 0xDD4, symBinAddr: 0x100003158, symSize: 0x17C }
+  - { offsetInCU: 0x4411, offset: 0x4411, size: 0x8, addend: 0x0, symName: __Z9insertionPiii, symObjAddr: 0xC54, symBinAddr: 0x100002FD8, symSize: 0xF4 }
+  - { offsetInCU: 0x4419, offset: 0x4419, size: 0x8, addend: 0x0, symName: __Z9quicksortPiii, symObjAddr: 0xD48, symBinAddr: 0x1000030CC, symSize: 0x8C }
+  - { offsetInCU: 0x44CD, offset: 0x44CD, size: 0x8, addend: 0x0, symName: __Z9partitionPiii, symObjAddr: 0x8BC, symBinAddr: 0x100002C40, symSize: 0x398 }
+  - { offsetInCU: 0x44D5, offset: 0x44D5, size: 0x8, addend: 0x0, symName: __Z9insertionPiii, symObjAddr: 0xC54, symBinAddr: 0x100002FD8, symSize: 0xF4 }
+  - { offsetInCU: 0x461D, offset: 0x461D, size: 0x8, addend: 0x0, symName: __Z4partPiR6pBlocki, symObjAddr: 0x0, symBinAddr: 0x100002384, symSize: 0x108 }
+  - { offsetInCU: 0x4625, offset: 0x4625, size: 0x8, addend: 0x0, symName: __Z5mergePiRK6pBlockS2_, symObjAddr: 0x108, symBinAddr: 0x10000248C, symSize: 0x1A4 }
+...
