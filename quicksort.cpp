@@ -59,7 +59,7 @@ pBlock merge(int A[],const pBlock &b1,const pBlock &b2){
     pBlock block;
     block.start = b1.start;
     block.mid = b1.end;
-    block.end = b2.mid;
+    block.end = b2.end;
 
     return block;
 }
